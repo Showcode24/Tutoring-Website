@@ -1,0 +1,310 @@
+/*-------------------------------------------------------
+Header
+--------------------------------------------------------*/
+
+.header {
+  border-bottom: 1px solid #e0e0e0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.navbar ul {
+list-style: none;
+text-decoration: none;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin-right: 2rem;
+}
+
+.navbar-brand img {
+  width: 9vh;
+}
+
+/* Navigation */
+.nav-link {
+  color: #001e00;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #3a8797;
+}
+
+.custom-dropdown-toggle {
+  position: relative;
+  padding-right: 1.5rem !important;
+}
+
+.dropdown-icon {
+  color: #001e00;
+  transition: transform 0.2s;
+}
+
+.custom-dropdown-toggle:hover .dropdown-icon {
+  color: #3a8797;
+}
+
+.dropdown-menu {
+  margin-top: 0.5rem !important;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem;
+}
+
+.dropdown-item {
+  color: #001e00;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f7f2;
+  color: #3a8797;
+}
+
+.nav-item li {
+  list-style: none;
+}
+/* Header Right Section */
+.header-right {
+  gap: 1.5rem;
+}
+
+/* Search */
+.search-container {
+  position: relative;
+  width: 240px;
+  background: #f7f7f7;
+  border-radius: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b757b;
+}
+
+.search-input {
+  padding: 8px 12px 8px 40px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  height: auto;
+  background: transparent;
+  width: 100%;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: none;
+  background: white;
+  border: 2px solid #3a8797;
+}
+
+.search-input::placeholder {
+  color: #6b757b;
+  padding-left: 30px;
+}
+
+/* Remove the default form-control styling */
+.search-input.form-control {
+  border: none;
+}
+
+.search-input.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #6b757b;
+  border-radius: 20px;
+}
+
+/* User Actions */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Talent Dropdown */
+.talent-select-container {
+  position: relative;
+}
+
+.talent-select-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #001e00;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.talent-select-button:hover {
+  border-color: #3a8797;
+}
+
+.talent-select-icon {
+  color: #001e00;
+  transition: transform 0.2s;
+}
+
+.talent-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  width: 280px;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.talent-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.talent-dropdown-item:hover {
+  background-color: #f2f7f2;
+  color: inherit;
+}
+
+.talent-dropdown-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f2f7f2;
+  border-radius: 50%;
+  color: #3a8797;
+}
+
+.talent-dropdown-content {
+  flex: 1;
+}
+
+.talent-dropdown-title {
+  font-weight: 500;
+  color: #001e00;
+  margin-bottom: 4px;
+}
+
+.talent-dropdown-description {
+  font-size: 12px;
+  color: #5e6d55;
+}
+
+.login-link {
+  color: #001e00;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.login-link:hover {
+  color: #3a8797;
+}
+
+.signup-btn {
+  background-color: #3a8797;
+  border: none;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+}
+
+.signup-btn:hover {
+  background-color: #1c3e45;
+  color: white;
+}
+
+@media (max-width: 991.98px) {
+  .header {
+    height: auto;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .header-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .user-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .talent-select-container {
+    width: 100%;
+  }
+
+  .talent-select-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .talent-dropdown {
+    width: 100%;
+    position: static;
+    margin-top: 8px;
+  }
+
+  .login-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .signup-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
