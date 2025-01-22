@@ -1,7 +1,7 @@
 import { Route, Routes, useLocation } from "react-router";
 import AppRouteKeys from "./AppRouteKeys";
 import Home from "../pages/home";
-import FindTalent from "../pages/find-talent";
+import FindTutor from "../pages/find-Tutor";
 import PostJob from "../pages/post-job";
 import BrowseProjects from "../pages/browse-projects";
 import HireHelp from "../pages/hire-help";
@@ -29,7 +29,7 @@ const AppRoutes = () => {
   return (
     <Routes key={location.pathname} location={location}>
       <Route path={AppRouteKeys.root} element={<Home />} />
-      <Route path={AppRouteKeys.findTalent} element={<FindTalent />} />
+      <Route path={AppRouteKeys.findTutor} element={<FindTutor />} />
       <Route path={AppRouteKeys.postJob} element={<PostJob />} />
       <Route path={AppRouteKeys.browseProjects} element={<BrowseProjects />} />
       <Route path={AppRouteKeys.hireHelp} element={<HireHelp />} />

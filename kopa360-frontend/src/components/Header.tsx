@@ -5,14 +5,14 @@ import '../styles/global.css';
 
 export default function Header() {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-  const [showTalentDropdown, setShowTalentDropdown] = useState(false);
+  const [showTutorDropdown, setShowTutorDropdown] = useState(false);
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
-  const talentOptions = [
+  const TutorOptions = [
     {
       icon: <Users size={20} />,
-      title: 'Talent',
+      title: 'Tutor',
       description: 'Hire professionals and agencies'
     },
     {
@@ -85,22 +85,22 @@ export default function Header() {
                 />
               </div>
               <div className="user-actions">
-                <div className="talent-select-container">
+                <div className="Tutor-select-container">
                   <button
-                    className="talent-select-button"
-                    onClick={() => setShowTalentDropdown(!showTalentDropdown)}
+                    className="Tutor-select-button"
+                    onClick={() => setShowTutorDropdown(!showTutorDropdown)}
                   >
-                    Talent
-                    <ChevronDown size={16} className="talent-select-icon" />
+                    Tutor
+                    <ChevronDown size={16} className="Tutor-select-icon" />
                   </button>
-                  {showTalentDropdown && (
-                    <div className="talent-dropdown">
-                      {talentOptions.map((option, index) => (
-                        <a key={index} href="#" className="talent-dropdown-item">
-                          <span className="talent-dropdown-icon">{option.icon}</span>
-                          <div className="talent-dropdown-content">
-                            <div className="talent-dropdown-title">{option.title}</div>
-                            <div className="talent-dropdown-description">{option.description}</div>
+                  {showTutorDropdown && (
+                    <div className="Tutor-dropdown">
+                      {TutorOptions.map((option, index) => (
+                        <a key={index} href="#" className="Tutor-dropdown-item">
+                          <span className="Tutor-dropdown-icon">{option.icon}</span>
+                          <div className="Tutor-dropdown-content">
+                            <div className="Tutor-dropdown-title">{option.title}</div>
+                            <div className="Tutor-dropdown-description">{option.description}</div>
                           </div>
                         </a>
                       ))}

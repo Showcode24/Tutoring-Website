@@ -1,8 +1,8 @@
-const FindTalent = () => {
+const FindTutor = () => {
   return (
     <div>
 
     </div>
   )
 }
-export default FindTalent;
+export default FindTutor;

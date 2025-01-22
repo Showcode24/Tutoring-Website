@@ -14,7 +14,7 @@ export default function Login() {
   return (
     <div className="login-container">
       <div className="login-card">
-        <h1 className="login-title">Log in to Upwork</h1>
+        <h1 className="login-title">Log in to Kopa360</h1>
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -67,7 +67,7 @@ export default function Login() {
           </button>
 
           <div className="signup-prompt">
-            <p>Don't have an Upwork account?</p>
+            <p>Don't have an Kopa360 account?</p>
             <a href="/sign-up" className="signup-link">Sign Up</a>
           </div>
         </form>

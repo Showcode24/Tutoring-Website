@@ -52,7 +52,7 @@ export default function SignupForm() {
 
   return (
     <div className="signup-container">
-      <h1 className="signup-title">Sign up to hire talent</h1>
+      <h1 className="signup-title">Sign up to hire Tutor</h1>
 
       <div className="social-buttons">
         <button className="social-button apple-button">
@@ -150,7 +150,7 @@ export default function SignupForm() {
           <label className="checkbox-label">
             <input type="checkbox" name="emailUpdates" checked={formData.emailUpdates} onChange={handleInputChange} />
             <span className="custom-checkbox"></span>
-            <span>Send me emails with tips on how to find talent that fits my needs.</span>
+            <span>Send me emails with tips on how to find Tutor that fits my needs.</span>
           </label>
         </div>
 

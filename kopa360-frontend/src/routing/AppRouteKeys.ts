@@ -1,6 +1,6 @@
 enum AppRouteKeys {
   root = "/",
-  findTalent = "/find-talent",
+  findTutor = "/find-Tutor",
   postJob = "/post-job",
   browseProjects = "/browse-projects",
   hireHelp = "/hire-help",
@@ -32,8 +32,8 @@ export const AppRouteMap: { [key in AppRouteKeys]: AppRouteType } = {
     label: "Home | Kopa360",
     role: "none",
   },
-  "/find-talent": {
-    label: "Find Talent",
+  "/find-Tutor": {
+    label: "Find Tutor",
     role: "none",
   },
   "/post-job": {

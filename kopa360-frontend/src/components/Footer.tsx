@@ -10,7 +10,7 @@ export default function Footer() {
             <h5>For Clients</h5>
             <ul className="footer-links">
               <li><a href="#">How to hire</a></li>
-              <li><a href="#">Talent Marketplace</a></li>
+              <li><a href="#">Tutor Marketplace</a></li>
               <li><a href="#">Project Catalog</a></li>
               <li><a href="#">Hire an agency</a></li>
               <li><a href="#">Enterprise</a></li>
@@ -18,18 +18,18 @@ export default function Footer() {
               <li><a href="#">Contract-to-hire</a></li>
               <li><a href="#">Direct Contracts</a></li>
               <li><a href="#">Hire worldwide</a></li>
-              <li><a href="#">Hire in the USA</a></li>
+              <li><a href="#">Hire in the Nigeria</a></li>
             </ul>
           </div>
 
-          {/* For Talent Column */}
+          {/* For Tutor Column */}
           <div className="col-md-3 mb-4">
-            <h5>For Talent</h5>
+            <h5>For Tutor</h5>
             <ul className="footer-links">
               <li><a href="#">How to find work</a></li>
               <li><a href="#">Direct Contracts</a></li>
               <li><a href="#">Find freelance jobs worldwide</a></li>
-              <li><a href="#">Find freelance jobs in the USA</a></li>
+              <li><a href="#">Find freelance jobs in the Nigeria</a></li>
               <li><a href="#">Win work with ads</a></li>
               <li><a href="#">Exclusive resources with Freelancer Plus</a></li>
             </ul>
@@ -41,7 +41,7 @@ export default function Footer() {
             <ul className="footer-links">
               <li><a href="#">Help & support</a></li>
               <li><a href="#">Success stories</a></li>
-              <li><a href="#">Upwork reviews</a></li>
+              <li><a href="#">Kopa360 reviews</a></li>
               <li><a href="#">Resources</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Affiliate programme</a></li>
@@ -92,7 +92,7 @@ export default function Footer() {
         {/* Copyright and Legal */}
         <div className="footer-legal">
           <div className="copyright">
-            © 2015 - 2025 Upwork® Global Inc.
+            © 2023 Kopa360® Global Inc.
           </div>
           <div className="legal-links">
             <a href="#">Terms of Service</a>

@@ -145,12 +145,12 @@ text-decoration: none;
   gap: 1.5rem;
 }
 
-/* Talent Dropdown */
-.talent-select-container {
+/* Tutor Dropdown */
+.Tutor-select-container {
   position: relative;
 }
 
-.talent-select-button {
+.Tutor-select-button {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -165,16 +165,16 @@ text-decoration: none;
   transition: all 0.2s;
 }
 
-.talent-select-button:hover {
+.Tutor-select-button:hover {
   border-color: #3a8797;
 }
 
-.talent-select-icon {
+.Tutor-select-icon {
   color: #001e00;
   transition: transform 0.2s;
 }
 
-.talent-dropdown {
+.Tutor-dropdown {
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
@@ -187,7 +187,7 @@ text-decoration: none;
   z-index: 1000;
 }
 
-.talent-dropdown-item {
+.Tutor-dropdown-item {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -198,12 +198,12 @@ text-decoration: none;
   transition: all 0.2s;
 }
 
-.talent-dropdown-item:hover {
+.Tutor-dropdown-item:hover {
   background-color: #f2f7f2;
   color: inherit;
 }
 
-.talent-dropdown-icon {
+.Tutor-dropdown-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,17 +214,17 @@ text-decoration: none;
   color: #3a8797;
 }
 
-.talent-dropdown-content {
+.Tutor-dropdown-content {
   flex: 1;
 }
 
-.talent-dropdown-title {
+.Tutor-dropdown-title {
   font-weight: 500;
   color: #001e00;
   margin-bottom: 4px;
 }
 
-.talent-dropdown-description {
+.Tutor-dropdown-description {
   font-size: 12px;
   color: #5e6d55;
 }
@@ -285,16 +285,16 @@ text-decoration: none;
     gap: 0.5rem;
   }
 
-  .talent-select-container {
+  .Tutor-select-container {
     width: 100%;
   }
 
-  .talent-select-button {
+  .Tutor-select-button {
     width: 100%;
     justify-content: space-between;
   }
 
-  .talent-dropdown {
+  .Tutor-dropdown {
     width: 100%;
     position: static;
     margin-top: 8px;

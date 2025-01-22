@@ -79,7 +79,7 @@ export default function Onboarding() {
         rating={5.0}
         hourlyRate={65.00}
         jobsCompleted={14}
-        quote="Upwork has enabled me to increase my rates. I know what I'm bringing to the table and love the feeling of being able to help a variety of clients."
+        quote="Kopa360 has enabled me to increase my rates. I know what I'm bringing to the table and love the feeling of being able to help a variety of clients."
         image="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
       />
     </div>

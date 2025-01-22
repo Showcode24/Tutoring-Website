@@ -5,8 +5,8 @@ export interface NavigationItem {
 }
 
 export const navigationItems: Record<string, NavigationItem> = {
-  findTalent: {
-    label: 'Find talent',
+  findTutor: {
+    label: 'Find Tutor',
     dropdownItems: [
       { label: 'Post a job and hire a pro', url: '/post-job' },
       { label: 'Browse and buy projects', url: '/browse-projects' },
