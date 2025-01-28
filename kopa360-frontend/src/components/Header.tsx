@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, ChevronDown, Users, Briefcase, Building2 } from 'lucide-react';
+import { ChevronDown, Users, Briefcase, Building2 } from 'lucide-react';
 import { navigationItems } from '../data';
 import '../styles/global.css';
 
@@ -75,7 +75,7 @@ export default function Header() {
               ))}
             </ul>
             <div className="header-right d-flex align-items-center">
-              <div className="search-container">
+              {/* <div className="search-container">
                 <Search size={18} className="search-icon" />
                 <input
                   type="search"
@@ -83,7 +83,7 @@ export default function Header() {
                   placeholder="Search"
                   aria-label="Search"
                 />
-              </div>
+              </div> */}
               <div className="user-actions">
                 <div className="Tutor-select-container">
                   <button

@@ -22,6 +22,10 @@ import NotFound from "../pages/not-found";
 import SignUpOption from "../pages/sign-up";
 import SignupForm from "../components/Register";
 import Login from "../pages/login";
+import TutorDashboard from "../components/TutorDashboard";
+import ParentDashboard from "../components/ParentDashboard";
+import ParentRegistrationForm from "../components/Registration/parent-registration-form";
+import TutorRegistrationForm from "../components/Registration/tutor-registration-form";
 
 
 const AppRoutes = () => {
@@ -49,6 +53,10 @@ const AppRoutes = () => {
       <Route path={AppRouteKeys.signup} element={<SignUpOption />} />
       <Route path={AppRouteKeys.register} element={<SignupForm />} />
       <Route path={AppRouteKeys.login} element={<Login />} />
+      <Route path={AppRouteKeys.tutorDashboard} element={<TutorDashboard />} />
+      <Route path={AppRouteKeys.parentDashboard} element={<ParentDashboard />} />
+      <Route path={AppRouteKeys.parentRegistration} element={<ParentRegistrationForm />} />
+      <Route path={AppRouteKeys.tutorRegistration} element={<TutorRegistrationForm />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -4,10 +4,10 @@ export default function ReviewInfo() {
 
   return (
     <div>
-      <h2 className="h3 mb-3">Review Your Information</h2>
+      <h2 className="h3 mb-5">Review Your Information</h2>
       <p className="text-muted mb-4">Please review the information you've provided</p>
 
-      <div className="mb-3">
+      <div className="mb-5">
         <h5>Personal Information</h5>
         <p>
           <strong>Name:</strong> John Doe
@@ -17,7 +17,7 @@ export default function ReviewInfo() {
         </p>
       </div>
 
-      <div className="mb-3">
+      <div className="mb-5">
         <h5>Contact Information</h5>
         <p>
           <strong>Email:</strong> john.doe@example.com
@@ -30,7 +30,7 @@ export default function ReviewInfo() {
         </p>
       </div>
 
-      <div className="mb-3">
+      <div className="mb-5">
         <h5>Education</h5>
         <p>
           <strong>Qualification:</strong> Bachelor's Degree
@@ -43,7 +43,7 @@ export default function ReviewInfo() {
         </p>
       </div>
 
-      <div className="mb-3">
+      <div className="mb-5">
         <h5>Experience</h5>
         <p>
           <strong>Years of Experience:</strong> 5
@@ -56,7 +56,7 @@ export default function ReviewInfo() {
         </p>
       </div>
 
-      <div className="mb-3">
+      <div className="mb-5">
         <h5>Subjects</h5>
         <p>Mathematics, Physics, Chemistry</p>
       </div>

@@ -15,11 +15,11 @@ export default function SubjectsSelection() {
 
       {Object.entries(subjects).map(([category, subjectList]) => (
         <div key={category} className="subject-category">
-          <h3 className="category-title">{category}</h3>
+          <h5 className="category-title">{category}</h5>
           <div className="checkbox-group">
             {subjectList.map((subject) => (
               <label key={subject} className="radio-label">
-                <input type="checkbox" name="subjects" value={subject} />
+                <input type="checkbox" name="subjects" className="check" value={subject} />
                 {subject}
               </label>
             ))}

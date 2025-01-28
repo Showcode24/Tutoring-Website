@@ -19,7 +19,11 @@ enum AppRouteKeys {
   pricing = "/pricing",
   signup = "/sign-up",
   register = "/register",
-  login = "/login"
+  login = "/login",
+  tutorDashboard = "/tutor-dashboard",
+  parentDashboard = "/parent-dashboard",
+  tutorRegistration = "/tutor-registration",
+  parentRegistration = "/parent-registration"
 }
 
 export type AppRouteType = {
@@ -110,6 +114,22 @@ export const AppRouteMap: { [key in AppRouteKeys]: AppRouteType } = {
   },
   "/login": {
     label: "Login",
+    role: "none",
+  },
+  "/tutor-dashboard": {
+    label: "Tutor Dashboard",
+    role: "none",
+  },
+  "/parent-dashboard": {
+    label: "Parent Dashboard",
+    role: "none",
+  },
+  "/tutor-registration": {
+    label: "Tutor Registration",
+    role: "none",
+  },
+  "/parent-registration": {
+    label: "Parent Registration",
     role: "none",
   }
 };

@@ -4,7 +4,7 @@ export default function EducationInfo() {
       <h2 className="h3 mb-3">Education Information</h2>
       <p className="text-muted mb-4">Please provide details about your educational background</p>
 
-      <div className="mb-3">
+      <div className="mb-3 for group">
         <label className="form-label" htmlFor="qualification">
           Highest Qualification
         </label>
@@ -18,11 +18,11 @@ export default function EducationInfo() {
         </select>
       </div>
 
-      <div className="mb-3">
+      <div className="mb-3 form-group">
         <label className="form-label" htmlFor="institution">
           Institution Name
         </label>
-        <input type="text" className="form-control" id="institution" placeholder="Enter the name of your institution" />
+        <input type="text" className="form-input" id="institution" placeholder="Enter the name of your institution" />
       </div>
 
       <div className="mb-3">

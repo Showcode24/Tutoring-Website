@@ -1,19 +1,21 @@
-import ClientSection from "../components/ClientSection";
+// import ClientSection from "../components/ClientSection";
 import HeroSection from "../components/HeroSection";
 import SignupPage from "../components/About";
-import SignupChoice from "../components/SignupChoice";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Layout from "../Layouts/Layout";
+import HowItWorks from "../components/ParentOnboarding";
+import GetStarted from "../components/TutorOnboarding";
 
 const Home = () => {
   return (
     <>
       <Layout>
         <HeroSection />
-        <SignupPage />
-        <ClientSection />
+        {/* <ClientSection /> */}
         <WhyChooseUs />
-        <SignupChoice />
+        <HowItWorks />
+        <GetStarted />
+        <SignupPage />
       </Layout>
     </>
   )

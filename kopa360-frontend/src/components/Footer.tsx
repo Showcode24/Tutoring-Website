@@ -12,12 +12,8 @@ export default function Footer() {
               <li><a href="#">How to hire</a></li>
               <li><a href="#">Tutor Marketplace</a></li>
               <li><a href="#">Project Catalog</a></li>
-              <li><a href="#">Hire an agency</a></li>
-              <li><a href="#">Enterprise</a></li>
-              <li><a href="#">Any Hire</a></li>
               <li><a href="#">Contract-to-hire</a></li>
               <li><a href="#">Direct Contracts</a></li>
-              <li><a href="#">Hire worldwide</a></li>
               <li><a href="#">Hire in the Nigeria</a></li>
             </ul>
           </div>
@@ -28,10 +24,7 @@ export default function Footer() {
             <ul className="footer-links">
               <li><a href="#">How to find work</a></li>
               <li><a href="#">Direct Contracts</a></li>
-              <li><a href="#">Find freelance jobs worldwide</a></li>
               <li><a href="#">Find freelance jobs in the Nigeria</a></li>
-              <li><a href="#">Win work with ads</a></li>
-              <li><a href="#">Exclusive resources with Freelancer Plus</a></li>
             </ul>
           </div>
 
@@ -44,8 +37,6 @@ export default function Footer() {
               <li><a href="#">Kopa360 reviews</a></li>
               <li><a href="#">Resources</a></li>
               <li><a href="#">Blog</a></li>
-              <li><a href="#">Affiliate programme</a></li>
-              <li><a href="#">Free Business Tools</a></li>
             </ul>
           </div>
 
@@ -55,14 +46,11 @@ export default function Footer() {
             <ul className="footer-links">
               <li><a href="#">About us</a></li>
               <li><a href="#">Leadership</a></li>
-              <li><a href="#">Investor relations</a></li>
               <li><a href="#">Careers</a></li>
               <li><a href="#">Our impact</a></li>
               <li><a href="#">Press</a></li>
               <li><a href="#">Contact us</a></li>
-              <li><a href="#">Partners</a></li>
               <li><a href="#">Trust, safety & security</a></li>
-              <li><a href="#">Modern slavery statement</a></li>
             </ul>
           </div>
         </div>
@@ -97,7 +85,6 @@ export default function Footer() {
           <div className="legal-links">
             <a href="#">Terms of Service</a>
             <a href="#">Privacy Policy</a>
-            <a href="#">CA Notice at Collection</a>
             <a href="#">Cookie Settings</a>
             <a href="#">Accessibility</a>
           </div>

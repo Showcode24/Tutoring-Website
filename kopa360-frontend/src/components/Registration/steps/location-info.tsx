@@ -29,7 +29,7 @@ export default function LocationInfo() {
         <label className="form-label" htmlFor="lga">
           Local Government Area
         </label>
-        <select id="lga" className="form-select">
+        <select id="lga" className="form-input">
           <option value="">Select LGA</option>
           {edoLGAs.map((lga) => (
             <option key={lga} value={lga.toLowerCase()}>
