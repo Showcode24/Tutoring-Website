@@ -8,38 +8,40 @@ export const navigationItems: Record<string, NavigationItem> = {
   findTutor: {
     label: 'Find Tutor',
     dropdownItems: [
-      { label: 'Post a job and hire a pro', url: '/post-job' },
-      { label: 'Browse and buy projects', url: '/browse-projects' },
-      { label: 'Let us help you hire', url: '/hire-help' }
+      { label: 'Post a job and hire a pro', url: '/' },
+      { label: 'Let us help you hire', url: '/' }
     ]
   },
   findWork: {
     label: 'Find work',
     dropdownItems: [
-      { label: 'Ways to earn', url: '/ways-to-earn' },
-      { label: 'Direct contracts', url: '/direct-contracts' },
-      { label: 'Getting paid', url: '/getting-paid' }
+      { label: 'Ways to earn', url: '/' },
+      { label: 'Direct contracts', url: '/' },
     ]
   },
   whyUpwork: {
     label: 'Why Kopa360',
     dropdownItems: [
-      { label: 'Success stories', url: '/success-stories' },
+      { label: 'Success stories', url: '/' },
       { label: 'Reviews', url: '/reviews' },
-      { label: 'How to hire', url: '/how-to-hire' }
+      { label: 'How to hire', url: '/' }
     ]
   },
   whatsNew: {
     label: "What's new",
     dropdownItems: [
-      { label: 'Feature updates', url: '/feature-updates' },
-      { label: 'Events', url: '/events' },
-      { label: 'Blog', url: '/blog' }
+      { label: 'Feature updates', url: '/' },
+      { label: 'Events', url: '/' },
+      { label: 'Blog', url: '/' }
     ]
   },
   pricing: {
     label: 'Pricing',
-    url: '/pricing'
+    url: '/'
+  },
+  innovationBox: {
+    label: 'Innovation Box',
+    url: '/innovation-box'
   }
 };
 
