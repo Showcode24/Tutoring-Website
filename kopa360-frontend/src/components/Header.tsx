@@ -1,31 +1,32 @@
 import { useState } from 'react';
-import { ChevronDown, Users, Briefcase, Building2 } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+// import { ChevronDown, Users, Briefcase, Building2 } from 'lucide-react';
 import { navigationItems } from '../data';
 import '../styles/global.css';
 
 export default function Header() {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-  const [showTutorDropdown, setShowTutorDropdown] = useState(false);
+  // const [showTutorDropdown, setShowTutorDropdown] = useState(false);
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
-  const TutorOptions = [
-    {
-      icon: <Users size={20} />,
-      title: 'Tutor',
-      description: 'Hire professionals and agencies'
-    },
-    {
-      icon: <Briefcase size={20} />,
-      title: 'Projects',
-      description: 'Buy ready-to-start services'
-    },
-    {
-      icon: <Building2 size={20} />,
-      title: 'Jobs',
-      description: 'Apply to jobs posted by clients'
-    }
-  ];
+  // const TutorOptions = [
+  //   {
+  //     icon: <Users size={20} />,
+  //     title: 'Tutor',
+  //     description: 'Hire professionals and agencies'
+  //   },
+  //   {
+  //     icon: <Briefcase size={20} />,
+  //     title: 'Projects',
+  //     description: 'Buy ready-to-start services'
+  //   },
+  //   {
+  //     icon: <Building2 size={20} />,
+  //     title: 'Jobs',
+  //     description: 'Apply to jobs posted by clients'
+  //   }
+  // ];
 
   return (
     <header className="header">
@@ -86,14 +87,14 @@ export default function Header() {
               </div> */}
               <div className="user-actions">
                 <div className="Tutor-select-container">
-                  <button
+                  {/* <button
                     className="Tutor-select-button"
                     onClick={() => setShowTutorDropdown(!showTutorDropdown)}
                   >
                     Tutor
                     <ChevronDown size={16} className="Tutor-select-icon" />
-                  </button>
-                  {showTutorDropdown && (
+                  </button> */}
+                  {/* {showTutorDropdown && (
                     <div className="Tutor-dropdown">
                       {TutorOptions.map((option, index) => (
                         <a key={index} href="#" className="Tutor-dropdown-item">
@@ -105,7 +106,7 @@ export default function Header() {
                         </a>
                       ))}
                     </div>
-                  )}
+                  )} */}
                 </div>
                 <a href="/login" className="login-link">Log in</a>
                 <a href="/sign-up" className="signup-btn">Sign up</a>

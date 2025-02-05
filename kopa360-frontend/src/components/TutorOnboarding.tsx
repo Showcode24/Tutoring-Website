@@ -3,9 +3,9 @@ import { User, ClipboardList, CalendarCheck } from "lucide-react";
 const GetStarted = () => {
   return (
     <section className="how-it-works">
-      <div className="how-it-works-header">
+      <div className="how-it-works-header text-center">
         <span className="how-it-works-span">FOR TUTORS</span>
-        <h2 className="how-it-works-title text-left">
+        <h2 className="how-it-works-title text-center">
           Get started as a tutor <br />
           and manage your sessions
         </h2>

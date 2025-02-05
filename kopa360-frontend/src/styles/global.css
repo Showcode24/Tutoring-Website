@@ -1,9 +1,217 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --font-default: "Manrope", sans-serif;
+  --font-heading: "Manrope", sans-serif;
+  --font-optional: "Barlow", sans-serif;
+  --fontawesome: "Font Awesome 5 Pro";
+}
+
+
+html,
+body,
+div,
+span,
+img,
+ol,
+ul,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+option,
+legend,
+label,
+article,
+aside,
+caption,
+figure,
+footer,
+header,
+hgroup,
+mark,
+nav,
+section,
+time,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+img {
+  border: none;
+  outline: none;
+  max-width: 100%;
+}
+
+label {
+  display: inline-block;
+  font-weight: normal;
+  margin-bottom: 5px;
+  max-width: 100%;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: var(--color-heading);
+}
+
+a img {
+  border: none;
+}
+
+a:active {
+  outline: none;
+  text-decoration: none;
+  color: var(--color-heading);
+  opacity: 1;
+}
+
+a:focus {
+  outline: none;
+  text-decoration: none;
+  color: var(--color-heading);
+}
+
+a:hover {
+  outline: none;
+  text-decoration: none;
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.color-style-two a:hover {
+  color: var(--color-style-two);
+}
+
+.color-style-three a:hover {
+  color: var(--color-style-two);
+}
+
+.color-style-four a:hover {
+  color: var(--color-style-four);
+}
+
+.color-style-five a:hover {
+  color: var(--color-secondary);
+}
+
+.secondary a:hover {
+  color: var(--color-primary);
+}
+
+button {
+  outline: medium none;
+}
+
+iframe {
+  border: none;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+
+pre {
+  display: block;
+  margin: 0 0 30px;
+  padding: 9.5px;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #333333;
+  border: 1px solid #ededed;
+  border-radius: inherit;
+  background-color: #f9f9f9;
+  font-size: 13px;
+  line-height: 1.42857143;
+}
+
+input {
+  border: 1px solid #e7e7e7;
+  border-radius: inherit;
+  -webkit-box-shadow: inherit;
+  box-shadow: inherit;
+  min-height: 50px;
+}
+
+input:focus {
+  outline: none;
+  -webkit-box-shadow: inherit;
+  box-shadow: inherit;
+}
+
+textarea:focus {
+  outline: none;
+  -webkit-box-shadow: inherit;
+  box-shadow: inherit;
+}
+
+select:focus {
+  outline: none;
+  -webkit-box-shadow: inherit;
+  box-shadow: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+b {
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.row {
+  --bs-gutter-x: 30px;
+}
+body {
+  font-family: var(--font-default);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  overflow-x: hidden;
+  /* overflow: hidden; */
+  background-color: var(--white);
+  color: var(--color-paragraph);
+}
+
 /*-------------------------------------------------------
 Header
 --------------------------------------------------------*/
 * {
-  font-family: "Inter", serif;
+  font-family: var(--font-default);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  background-color: var(--white);
+  color: var(--color-paragraph);
 }
 .header {
   border-bottom: 1px solid #e0e0e0;
@@ -802,7 +1010,7 @@ Why Choose Us
 
 .title {
   font-size: 3.5rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #001e00;
   margin-bottom: 3rem;
   line-height: 1.2;
@@ -827,7 +1035,7 @@ Why Choose Us
 
 .feature-content h3 {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #001e00;
   margin-bottom: 0.5rem;
 }
@@ -924,7 +1132,7 @@ Register
 
 .signup-title {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #001e00;
   text-align: center;
   margin-bottom: 2rem;
@@ -1936,18 +2144,14 @@ Tutor Dashboard
   margin-top: 4rem;
 }
 .how-it-works-span {
-  margin-left: 6rem;
   letter-spacing: 0.3rem;
   color: #3a8797;
   font-size: 14px;
   font-weight: 700;
 }
 .how-it-works-title {
-  font-size: 2.5rem;
+  font-size: 4vw;
   text-align: left;
-  margin-bottom: 20px;
-  margin-left: 6rem;
-  margin-top: 1rem;
   color: #fff;
   font-weight: 400;
 }
@@ -1958,8 +2162,8 @@ Tutor Dashboard
   font-weight: 200;
   font-size: 13px;
   background-color: #083449;
-  width: 17rem;
-  height: 12rem;
+  width: 90%;
+  height: max-content;
   padding: 2rem;
   padding-top: 3rem;
   border-radius: 10px;
@@ -1996,3 +2200,178 @@ Tutor Dashboard
   margin-top: 2px;
   margin-right: 5px;
 }
+
+
+
+/*--------------------------------------------------------------
+# Innovation Box
+--------------------------------------------------------------*/
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header-innovation {
+  text-align: center;
+  padding-top: 3vw;
+  margin-bottom: 24px;
+}
+
+.header-innovation h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.header-innovation p {
+  color: #666666;
+  font-size: 14px;
+}
+
+.section-innovation {
+  margin-bottom: 24px;
+}
+
+.section-innovation h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #062835;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+  padding-right: 32px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox-item label {
+  margin-bottom: 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.file-upload {
+  position: relative;
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+}
+
+.upload-placeholder span {
+  font-size: 14px;
+}
+
+.upload-placeholder small {
+  font-size: 12px;
+  color: #999;
+}
+
+.submit-button {
+  display: block;
+  width: auto;
+  margin: 32px auto 0;
+  padding: 8px 24px;
+  background: #083449;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: inherit;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+}
+
+
+

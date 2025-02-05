@@ -3,9 +3,9 @@ import { User, ClipboardList, MousePointer, CalendarCheck } from "lucide-react";
 const HowItWorks = () => {
   return (
     <section className="how-it-works">
-      <div className="how-it-works-header">
+      <div className="how-it-works-header text-center">
         <span className="how-it-works-span">FOR PARENTS</span>
-        <h2 className="how-it-works-title text-left">
+        <h2 className="how-it-works-title text-center">
           Learn the simple processes <br></br>and see how it works clearly
         </h2>
       </div>

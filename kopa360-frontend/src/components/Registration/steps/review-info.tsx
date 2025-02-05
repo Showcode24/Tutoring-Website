@@ -1,7 +1,45 @@
-export default function ReviewInfo() {
-  // In a real application, you would pass the collected data to this component
-  // and display it for review. For this example, we'll use placeholder data.
+type ReviewInfoProps = {
+  formData: {
+    personalInfo: {
+      fullName: string
+      gender: string
+    }
+    contactInfo: {
+      email: string
+      phoneNumber: string
+      address: string
+    }
+    bankInfo: {
+      accountName: string
+      accountNumber: string
+      bankName: string
+    }
+    locationInfo: {
+      selectedLGA: string
+      state: string
+    }
+    educationInfo: {
+      qualification: string
+      institution: string
+      graduationYear: string
+    }
+    experienceInfo: {
+      yearsOfExperience: string
+      previousSchools: string[]
+      specializations: string[]
+    }
+    subjectSelection: {
+      [key: string]: string[]
+    }
+    bioInfo: {
+      bio: string
+      achievements: string[]
+      interests: string[]
+    }
+  }
+}
 
+export default function ReviewInfo({ formData }: ReviewInfoProps) {
   return (
     <div>
       <h2 className="h3 mb-5">Review Your Information</h2>
@@ -10,55 +48,95 @@ export default function ReviewInfo() {
       <div className="mb-5">
         <h5>Personal Information</h5>
         <p>
-          <strong>Name:</strong> John Doe
+          <strong>Name:</strong> {formData.personalInfo.fullName}
         </p>
         <p>
-          <strong>Gender:</strong> Male
+          <strong>Gender:</strong> {formData.personalInfo.gender}
         </p>
       </div>
 
       <div className="mb-5">
         <h5>Contact Information</h5>
         <p>
-          <strong>Email:</strong> john.doe@example.com
+          <strong>Email:</strong> {formData.contactInfo.email}
         </p>
         <p>
-          <strong>Phone:</strong> +234 123 456 7890
+          <strong>Phone:</strong> {formData.contactInfo.phoneNumber}
         </p>
         <p>
-          <strong>Address:</strong> 123 Main St, Benin City, Edo State
+          <strong>Address:</strong> {formData.contactInfo.address}
+        </p>
+      </div>
+
+      <div className="mb-5">
+        <h5>Bank Information</h5>
+        <p>
+          <strong>Account Name:</strong> {formData.bankInfo.accountName}
+        </p>
+        <p>
+          <strong>Account Number:</strong> {formData.bankInfo.accountNumber}
+        </p>
+        <p>
+          <strong>Bank Name:</strong> {formData.bankInfo.bankName}
+        </p>
+      </div>
+
+      <div className="mb-5">
+        <h5>Location</h5>
+        <p>
+          <strong>LGA:</strong> {formData.locationInfo.selectedLGA}
+        </p>
+        <p>
+          <strong>State:</strong> {formData.locationInfo.state}
         </p>
       </div>
 
       <div className="mb-5">
         <h5>Education</h5>
         <p>
-          <strong>Qualification:</strong> Bachelor's Degree
+          <strong>Qualification:</strong> {formData.educationInfo.qualification}
         </p>
         <p>
-          <strong>Institution:</strong> University of Benin
+          <strong>Institution:</strong> {formData.educationInfo.institution}
         </p>
         <p>
-          <strong>Graduation Year:</strong> 2015
+          <strong>Graduation Year:</strong> {formData.educationInfo.graduationYear}
         </p>
       </div>
 
       <div className="mb-5">
         <h5>Experience</h5>
         <p>
-          <strong>Years of Experience:</strong> 5
+          <strong>Years of Experience:</strong> {formData.experienceInfo.yearsOfExperience}
         </p>
         <p>
-          <strong>Previous Schools:</strong> ABC Secondary School, XYZ High School
+          <strong>Previous Schools:</strong> {formData.experienceInfo.previousSchools.join(", ")}
         </p>
         <p>
-          <strong>Specializations:</strong> Mathematics, Physics
+          <strong>Specializations:</strong> {formData.experienceInfo.specializations.join(", ")}
         </p>
       </div>
 
       <div className="mb-5">
         <h5>Subjects</h5>
-        <p>Mathematics, Physics, Chemistry</p>
+        {Object.entries(formData.subjectSelection).map(([category, subjects]) => (
+          <p key={category}>
+            <strong>{category}:</strong> {subjects.join(", ")}
+          </p>
+        ))}
+      </div>
+
+      <div className="mb-5">
+        <h5>Bio Information</h5>
+        <p>
+          <strong>Bio:</strong> {formData.bioInfo.bio}
+        </p>
+        <p>
+          <strong>Achievements:</strong> {formData.bioInfo.achievements.join(", ")}
+        </p>
+        <p>
+          <strong>Interests:</strong> {formData.bioInfo.interests.join(", ")}
+        </p>
       </div>
 
       <p className="text-muted">If you need to make any changes, please go back to the relevant section.</p>

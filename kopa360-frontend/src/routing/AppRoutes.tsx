@@ -26,6 +26,7 @@ import TutorDashboard from "../components/TutorDashboard";
 import ParentDashboard from "../components/ParentDashboard";
 import ParentRegistrationForm from "../components/Registration/parent-registration-form";
 import TutorRegistrationForm from "../components/Registration/tutor-registration-form";
+import InnovationBox from "../pages/innovation-box";
 
 
 const AppRoutes = () => {
@@ -57,6 +58,7 @@ const AppRoutes = () => {
       <Route path={AppRouteKeys.parentDashboard} element={<ParentDashboard />} />
       <Route path={AppRouteKeys.parentRegistration} element={<ParentRegistrationForm />} />
       <Route path={AppRouteKeys.tutorRegistration} element={<TutorRegistrationForm />} />
+      <Route path={AppRouteKeys.innovationBox} element={<InnovationBox />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

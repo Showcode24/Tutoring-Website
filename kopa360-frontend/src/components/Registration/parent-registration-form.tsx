@@ -1,4 +1,6 @@
-import { useState } from "react"
+import  { useState } from "react"
+import { doc, setDoc } from "firebase/firestore"
+import { auth, db } from "../../firebase" // Adjust this import based on your Firebase config file location
 
 // Form steps components
 import PersonalInfo from "./steps/personal-info"
@@ -11,6 +13,16 @@ export default function ParentRegistrationForm() {
   const [currentStep, setCurrentStep] = useState(1)
   const totalSteps = 5
 
+  const [formData, setFormData] = useState({
+    personalInfo: { fullName: "", gender: "" },
+    contactInfo: { email: "", phoneNumber: "", address: "" },
+    locationInfo: { selectedLGA: "", state: "Edo" },
+  })
+
+  const handleDataChange = (step: keyof typeof formData, data: any) => {
+    setFormData((prev) => ({ ...prev, [step]: { ...prev[step], ...data } }))
+  }
+
   const handleNext = () => {
     setCurrentStep((prev) => Math.min(prev + 1, totalSteps))
   }
@@ -19,18 +31,48 @@ export default function ParentRegistrationForm() {
     setCurrentStep((prev) => Math.max(prev - 1, 1))
   }
 
+  const handleSubmit = async () => {
+    try {
+      const user = auth.currentUser
+      if (!user) {
+        throw new Error("No authenticated user found")
+      }
+
+      await setDoc(doc(db, "parents", user.uid), formData)
+      alert("Registration submitted successfully!")
+    } catch (error) {
+      console.error("Error submitting registration:", error)
+      alert("Failed to submit registration. Please try again.")
+    }
+  }
+
   const renderStep = () => {
     switch (currentStep) {
       case 1:
-        return <PersonalInfo />
+        return (
+          <PersonalInfo
+            onDataChange={(data) => handleDataChange("personalInfo", data)}
+            initialData={formData.personalInfo}
+          />
+        )
       case 2:
-        return <ContactInfo />
+        return (
+          <ContactInfo
+            onDataChange={(data) => handleDataChange("contactInfo", data)}
+            initialData={formData.contactInfo}
+          />
+        )
       case 3:
-        return <LocationInfo />
+        return (
+          <LocationInfo
+            onDataChange={(data) => handleDataChange("locationInfo", data)}
+            initialData={formData.locationInfo}
+          />
+        )
       case 4:
-        return <ReviewInfo />
+        return <ReviewInfo formData={formData as any} />
       case 5:
-        return <SubmitInfo />
+        return <SubmitInfo onSubmit={handleSubmit} />
       default:
         return null
     }
@@ -69,7 +111,7 @@ export default function ParentRegistrationForm() {
             Next
           </button>
         ) : (
-          <button className="btn btn-success" onClick={() => alert("Registration submitted!")}>
+          <button className="btn btn-success" onClick={handleSubmit}>
             Submit Registration
           </button>
         )}

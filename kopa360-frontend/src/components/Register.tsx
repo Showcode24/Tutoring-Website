@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/
 import { doc, setDoc } from "firebase/firestore"
 import { useNavigate } from "react-router-dom"
 import { auth, db } from "../firebase"
+import Header from "./Header"
 
 export default function SignupForm() {
   const navigate = useNavigate()
@@ -95,12 +96,15 @@ export default function SignupForm() {
   ]
 
   return (
-    <div className="signup-container">
-      <h1 className="signup-title">Sign up</h1>
+    <>
+      <Header />
+      <div className="signup-container">
 
-      {error && <div className="error-message bg-red-100 text-red-700 p-3 rounded mb-4">{error}</div>}
+        <h1 className="signup-title mt-5">Sign up</h1>
 
-      <div className="social-buttons">
+        {error && <div className="error-message bg-red-100 text-red-700 p-3 rounded mb-4">{error}</div>}
+
+        {/* <div className="social-buttons">
         <button className="social-button apple-button">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
@@ -121,158 +125,159 @@ export default function SignupForm() {
 
       <div className="divider">
         <span>or</span>
+      </div> */}
+
+        <form onSubmit={handleSubmit} className="signup-form">
+          <div className="role-selection mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-2">I am a:</label>
+            <div className="flex gap-4">
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  name="role"
+                  value="parent"
+                  checked={formData.role === "parent"}
+                  onChange={handleInputChange}
+                  className="form-radio h-4 w-4 text-indigo-600"
+                />
+                <span className="ml-2">Parent</span>
+              </label>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  name="role"
+                  value="tutor"
+                  checked={formData.role === "tutor"}
+                  onChange={handleInputChange}
+                  className="form-radio h-4 w-4 text-indigo-600"
+                />
+                <span className="ml-2">Tutor</span>
+              </label>
+            </div>
+          </div>
+
+          <div className="name-fields">
+            <div className="form-group">
+              <label htmlFor="firstName">First name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="lastName">Last name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email">Work email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+
+          <div className="form-group password-group">
+            <label htmlFor="password">Password</label>
+            <div className="password-input-container">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                placeholder="Password (8 or more characters)"
+                value={formData.password}
+                onChange={handleInputChange}
+                required
+                minLength={8}
+              />
+              <button
+                type="button"
+                className="password-toggle"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="localGovernment">Local Government in Edo State</label>
+            <div className="select-wrapper">
+              <select
+                id="localGovernment"
+                name="localGovernment"
+                value={formData.localGovernment}
+                onChange={handleInputChange}
+                required
+              >
+                {edoLocalGovernments.map((lg) => (
+                  <option key={lg} value={lg}>
+                    {lg}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div className="checkbox-group">
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                name="emailUpdates"
+                checked={formData.emailUpdates}
+                onChange={handleInputChange}
+              />
+              <span className="custom-checkbox"></span>
+              <span>Send me emails with tips on how to find Tutor that fits my needs.</span>
+            </label>
+          </div>
+
+          <div className="checkbox-group">
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                name="termsAccepted"
+                checked={formData.termsAccepted}
+                onChange={handleInputChange}
+                required
+              />
+              <span className="custom-checkbox"></span>
+              <span>
+                Yes, I understand and agree to the Kopa360 <a href="/terms">Terms of Service</a>, including the
+                <a href="/user-agreement">User Agreement</a> and <a href="/privacy">Privacy Policy</a>.
+              </span>
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            className="submit-button"
+            disabled={!formData.termsAccepted || loading}
+          >
+            {loading ? "Creating account..." : "Create my account"}
+          </button>
+
+          <div className="login-link">
+            Already have an account? <a href="/login">Log In</a>
+          </div>
+        </form>
       </div>
-
-      <form onSubmit={handleSubmit} className="signup-form">
-        <div className="role-selection mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">I am a:</label>
-          <div className="flex gap-4">
-            <label className="inline-flex items-center">
-              <input
-                type="radio"
-                name="role"
-                value="parent"
-                checked={formData.role === "parent"}
-                onChange={handleInputChange}
-                className="form-radio h-4 w-4 text-indigo-600"
-              />
-              <span className="ml-2">Parent</span>
-            </label>
-            <label className="inline-flex items-center">
-              <input
-                type="radio"
-                name="role"
-                value="tutor"
-                checked={formData.role === "tutor"}
-                onChange={handleInputChange}
-                className="form-radio h-4 w-4 text-indigo-600"
-              />
-              <span className="ml-2">Tutor</span>
-            </label>
-          </div>
-        </div>
-
-        <div className="name-fields">
-          <div className="form-group">
-            <label htmlFor="firstName">First name</label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="lastName">Last name</label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="email">Work email address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-
-        <div className="form-group password-group">
-          <label htmlFor="password">Password</label>
-          <div className="password-input-container">
-            <input
-              type={showPassword ? "text" : "password"}
-              id="password"
-              name="password"
-              placeholder="Password (8 or more characters)"
-              value={formData.password}
-              onChange={handleInputChange}
-              required
-              minLength={8}
-            />
-            <button
-              type="button"
-              className="password-toggle"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-            </button>
-          </div>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="localGovernment">Local Government in Edo State</label>
-          <div className="select-wrapper">
-            <select
-              id="localGovernment"
-              name="localGovernment"
-              value={formData.localGovernment}
-              onChange={handleInputChange}
-              required
-            >
-              {edoLocalGovernments.map((lg) => (
-                <option key={lg} value={lg}>
-                  {lg}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        <div className="checkbox-group">
-          <label className="checkbox-label">
-            <input
-              type="checkbox"
-              name="emailUpdates"
-              checked={formData.emailUpdates}
-              onChange={handleInputChange}
-            />
-            <span className="custom-checkbox"></span>
-            <span>Send me emails with tips on how to find Tutor that fits my needs.</span>
-          </label>
-        </div>
-
-        <div className="checkbox-group">
-          <label className="checkbox-label">
-            <input
-              type="checkbox"
-              name="termsAccepted"
-              checked={formData.termsAccepted}
-              onChange={handleInputChange}
-              required
-            />
-            <span className="custom-checkbox"></span>
-            <span>
-              Yes, I understand and agree to the Kopa360 <a href="/terms">Terms of Service</a>, including the
-              <a href="/user-agreement">User Agreement</a> and <a href="/privacy">Privacy Policy</a>.
-            </span>
-          </label>
-        </div>
-
-        <button
-          type="submit"
-          className="submit-button"
-          disabled={!formData.termsAccepted || loading}
-        >
-          {loading ? "Creating account..." : "Create my account"}
-        </button>
-
-        <div className="login-link">
-          Already have an account? <a href="/login">Log In</a>
-        </div>
-      </form>
-    </div>
+    </>
   )
 }
